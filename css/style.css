@@ -126,7 +126,7 @@ h6,
 }
 
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
+    .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -189,7 +189,7 @@ h6,
         position: relative;
         min-height: 450px;
     }
-    
+
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -517,4 +517,36 @@ h6,
 
 .copyright a:hover {
     color: var(--primary);
+}
+
+/* Kartların yüksekliğini sabitleme */
+.portfolio-item {
+    height: 400px;
+    /* Sabit yükseklik belirliyoruz */
+}
+
+/* Resimlerin her zaman alana uyacak şekilde boyutlanması */
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Resimleri düzgün şekilde kesip yerleştirme */
+}
+
+/* Kart içeriğini ortalamak için Flexbox */
+.portfolio-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Başlık ve butonu ayırır */
+    height: 100%;
+}
+
+/* Başlık ve butonun görünümünü ayarlama */
+.portfolio-text {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
